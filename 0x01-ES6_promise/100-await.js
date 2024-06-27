@@ -8,7 +8,6 @@ export default async function asyncUploadUser() {
     user = await createUser();
     return { photo, user };
   } catch (e) {
-    console.log(e);
     return { photo, user };
   }
 }

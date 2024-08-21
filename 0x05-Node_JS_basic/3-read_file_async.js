@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { resolve } = require('path');
 
 function countStudents(path) {
   return new Promise((resolve, reject) => {
@@ -14,7 +13,7 @@ function countStudents(path) {
         console.log(`Number of students: ${students.length}`);
         for (const student of students) {
           if (student.includes('CS')) {
-            const name = student.split(',');
+            const name = student.split(',').filter((line) => line.trim() !== '');
             CS.push(name[0]);
           }
           if (student.includes('SWE')) {

@@ -19,10 +19,10 @@ function countStudents(path) {
         if (student.includes('SWE')) {
           SWE.push(name[0]);
         }
-        }
-        console.log(`Number of students in CS: ${CS.length}. List: ${CS.join(', ')}`);
-        console.log(`Number of students in SWE: ${SWE.length}. List: ${SWE.join(', ')}`);
-        resolve(); 
+      }
+      console.log(`Number of students in CS: ${CS.length}. List: ${CS.join(', ')}`);
+      console.log(`Number of students in SWE: ${SWE.length}. List: ${SWE.join(', ')}`);
+      return resolve();
     });
   });
 }

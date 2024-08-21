@@ -7,8 +7,8 @@ function countStudents(path) {
   const SWE = [];
   let file = '';
   try {
-    file = fs.readFileSync(path, 'utf8');
-    const students = file.split('\n');
+    file = fs.readFileSync(path, 'utf-8');
+    const students = file.split('\n').filter(line => line.trim() !== '');
     students.shift();
     console.log(`Number of students: ${students.length}`);
     for (const student of students) {

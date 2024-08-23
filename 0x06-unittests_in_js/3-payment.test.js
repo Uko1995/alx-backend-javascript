@@ -17,9 +17,9 @@ describe('sendPaymentToAPI', () => {
     consoleSpy.restore();
   });
 
-  it('should log correct output', () => {
+  it('checking how many times utils method was called', () => {
     sendPaymentRequestToApi(100, 20);
-    expect(consoleSpy.calledWithExactly('SUM', 100, 20)).to.be.true;
+    expect(consoleSpy.calledOnce).to.be.true;
   });
 
   it('should use correct arguments', () => {

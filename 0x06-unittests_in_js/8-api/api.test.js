@@ -9,6 +9,10 @@ describe('status and content', () => {
   const endpoint = 'https://localhost:7865';
   it('correct code and correct result', (done) => {
     request(endpoint, (error, response, body) => {
+      if (error) {
+        done(error);
+        return;
+      }
       expect(response.statusCode).equal(200);
       expect(body).to.equal('Welcome to the payment system');
       done();

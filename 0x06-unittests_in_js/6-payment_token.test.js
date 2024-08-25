@@ -11,7 +11,7 @@ describe('getPaymentTokenFromApi', () => {
   it('should return reslove if true', () => new Promise((done) => {
     getPaymentTokenFromAPI(true).then((response) => {
       expect(response).to.be.an('object');
-      expect(response).to.have.property('data', 'Sucessful response from the API');
+      expect(response).to.have.property('data', 'Successful response from the API');
       done();
     })
       .catch((err) => done(err));
